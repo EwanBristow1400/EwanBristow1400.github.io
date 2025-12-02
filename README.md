@@ -1,2 +1,5 @@
 # EB_P5JS_Sketches
-All of the p5js sketches I've made since beginning 
+
+I've been working with p5js for a few months but never really put them anywhere. This is an attempt to give them a place to live.
+
+Feel free to use the code wherever the fuck you want
