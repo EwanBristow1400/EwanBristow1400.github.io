@@ -6,6 +6,7 @@ let blockColour = []
 function setup() {
     createCanvas(windowWidth, windowHeight)
     grid = createGraphics(windowWidth, windowHeight)
+    textimage = createGraphics(windowWidth, windowHeight)
     createInitGrid()
 }
 
@@ -32,13 +33,15 @@ function draw() {
         BlockArray[i].show()
     }
 
-    push()
-    blendMode(DIFFERENCE)
-    fill(255)
-    textSize(windowHeight*0.2)
-    textAlign(LEFT,TOP)
-    text("I\nMake\nAudio\nTools" ,20 , 20)
-    pop()
+
+    textimage.blendMode(BLEND)
+    textimage.fill(255)
+    textimage.textSize(windowHeight*0.2)
+    textimage.textAlign(LEFT,TOP)
+    textimage.text("I\nMake\nAudio\nTools" ,20 , 20)
+
+
+    image(textimage,0,0)
 
 }
 
@@ -64,7 +67,7 @@ class randomBlock{
 
 
 function createInitGrid(){
-    grid.fill(30)
+    grid.noFill()
     grid.stroke(100)
     for (i = 0; i < windowWidth; i += 30){
         for (j = 0; j < windowHeight; j += 30)
